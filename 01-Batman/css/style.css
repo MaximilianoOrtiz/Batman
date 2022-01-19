@@ -38,7 +38,7 @@ img{
 }
 
 [id]{
-    scroll-margin-top: 22ex ;
+    scroll-margin-top: 10ex ;
 }
 
  /*Stylos a la header*/
@@ -48,30 +48,45 @@ img{
     background-repeat: no-repeat;
 }
 
-.header{
+/* .header{
     display: flex;
     position:sticky;
     top: 0;
     background-color: rgba(0, 0, 0, 0.80);
     flex-direction: column;
     align-items: center;
+} */
+
+.header{
+    display: flex;
+    flex-flow: row nowrap;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.80);
+}
+
+.header .nav ul{
+    display:flex;
+    justify-content:space-around;
+    padding: 1.5rem;
+    align-items: center;
 }
 
 @media screen and (min-width: 800px) {
     .header{
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
+        position:sticky;
+        top: 0;
     }
 
-    .header .nav ul{
-        display:flex;
-        justify-content:space-around;
-        padding: 1.5rem;
-        align-items: center;
+    [id]{
+        scroll-margin-top: 22ex ;
     }
 
-   
 }
 
 /*Hero Image*/
